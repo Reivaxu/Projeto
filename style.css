@@ -1,0 +1,173 @@
+/* Para toda a página*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Configurando o ligth mode*/
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/nigth-background.png);
+  --border-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --hover-color: rgba(255, 255, 255, 0.05);
+  --button-color: rgba(255, 255, 255, 0.05);
+  --switch-bg: url(./assets/moon-star.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/day-background.jpg);
+  --border-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --hover-color: rgba(0, 0, 0, 0.02);
+  --button-color: rgba(0, 0, 0, 0.1);
+  --switch-bg: url(./assets/sun.svg);
+}
+
+/* Corpo da página*/
+body {
+  /* background-image: url(./assets/assets/nigth-background.png); url= serve para localizar a imagem 
+  background-size: cover;  A imagem ira cobrir todo o espaço visível
+  background-repeat: no-repeat;  Para de repetir a imagem para preencher 
+  background-position: top center;  A imagem começa no eixo y e está centralizada no meio do eixo x, por isso TOP(topo) center(CENTRO)
+  */
+
+  /*É possível criar um SHORTHAND(atalho) para o fundo, background: color image repeat position/size nesta ordem*/
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+} /* Apliquei a fonte e a cor para todo o body*/
+
+#container {
+  width: 588px;
+  margin: 56px auto 0px; /* Alinha a caixa ao meio automaticamente, só funciona com a largura, e funciona como SHORTHAND em sentido horario*/
+  gap: 8px;
+  padding: 0px 24px;
+}
+
+/* Perfil de Gustavo*/
+#profile {
+  text-align: center;
+  gap: 8px;
+  padding: 24px 0px 16px;
+}
+/*Outra forma de realizar a centralização da imagem, utilizando o display natural da imagem para apenas alinha o texto do pai para colocar seu conteudo no centro */
+#profile img {
+  width: 112px;
+  height: 112px;
+  padding: 3px;
+}
+/*
+#profile img {
+  margin: auto;  Em inline não funciona o margin auto
+  display: block;
+  padding: 5px;
+  width: 112px;
+}
+*/
+
+/* switch */
+#switch {
+  position: relative;
+  height: 32px;
+  width: 64px;
+  margin: 4px auto; /* Alinhamento de display: block */
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg) no-repeat center;
+  border-radius: 50%;
+  border: 0;
+
+  /* Alinhando elementos absolute */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-60%);
+}
+
+.light #switch button {
+  left: initial;
+  right: 0;
+}
+
+#switch span {
+  width: 64px; /* O display do span automaticamente é inline, e por isso não funciona o width*/
+  height: 24px;
+  display: block;
+  border-radius: 9999px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-color);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+/* Lista */
+ul {
+  list-style: none;
+  gap: 16px; /* Serve para deixar os conteúdos da tag separados um do outro*/
+  display: flex; /* Deixa os elementos filhos, um do lado da outro (por padrão), tentando deixa-los mais flexiveis possível*/
+  flex-direction: column; /* Funciona apenas se o elemnto for flex, deixando as caixas em colunas*/
+  padding: 24px 0;
+}
+
+ul li {
+  padding: 16px 24px;
+  text-align: center; /* Serve para alinhar o texto para o meio do eixo y da caixa*/
+  border: 1px solid var(--border-color); /* Utiliza do rgba = Red Green Blue Alpha para sintetizar a cor*/
+  background: var(--surface-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px); /*Deixa a caixa embaçada*/
+  -webkit-backdrop-filter: blur(
+    4px
+  ); /* Utiliza do Webkit para poder suportar outros navegadores*/
+  transition: background 0.3s;
+}
+ul li a {
+  align-items: center; /* alinha os elementos ao meio do eixo x*/
+  font-weight: 500; /* A partir de 400 a fonte vira bold, e pode ser escrita como bold no código*/
+  text-decoration: none; /* Tira a decoração do texto com o none, tirando basicamente o underline no elemento da tag <a>*/
+}
+
+/* Pseudo-selector*/
+ul li:hover {
+  border: 1.5px solid var(--text-color);
+  background: var(--hover-color);
+}
+
+/* links sociais */
+#icones-sociais {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+#icones-sociais a {
+  transition: background 0, 3s;
+  padding: 18px;
+  display: flex;
+  gap: 8px;
+}
+
+#icones-sociais a:hover {
+  border-radius: 50%;
+  background: var(--button-color);
+}
+
+/* Rodapé */
+footer {
+  padding: 24px 0;
+  font-size: 14px;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+}

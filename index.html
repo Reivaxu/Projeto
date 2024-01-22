@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--Define o documento HTML simples-->
+<html lang="pt-br" class="">
+  <!-- HTML em sí = Document element ou Root element / lang= linguagem-->
+  <head>
+    <!--Tag responsavel por ajustar configurações do nosso documento que não são visíveis para quem acessa a página-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Basicamente, aqui eu coloquei a fonte do site por HTML-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <!-- Define o conjunto de caracteres que iremos usar na página-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Serve muito basicamente para poder gerar compatibilidade com computadores antigos/ content= serve para adaptar a página dependendo do porte,seja um computador ou celular / name= serve para selecionar a parte visível(viewport) -->
+    <title>Dev links</title>
+    <!-- nomeia a página-->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Parte visível da página -->
+    <div id="container">
+      <div id="profile">
+        <img src="./assets/avatar-night.png" alt="avatar-night" />
+        <p>@Xavier</p>
+      </div>
+      <div id="switch" onclick="toggleButton()">
+        <button></button>
+        <span></span>
+      </div>
+      <ul>
+        <!-- lista desodernada, apenas aperece bolinhas ao lado de cada item-->
+        <li>
+          <!-- item da lista, apenas um dos itens da lista desodernada-->
+          <a href="" target="_blank">Conheça meu E-mail</a>
+          <!-- utiliza o target="_blank" para que se abra uma nova página e mantenha o usuário na minha página -->
+        </li>
+        <li>
+          <a href="" target="_blank">Conheça meus projetos</a>
+        </li>
+        <li>
+          <a href="" target="_blank">Conheça meu curriculum</a>
+        </li>
+        <li>
+          <a href="" target="_blank">Conheça meu Blablablablabla</a>
+        </li>
+      </ul>
+      <div id="icones-sociais">
+        <a href="https://instagram.com/gustaxavs" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/gustavo-xavier-6a0b66216/"
+          target="_blank"
+        >
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="https://github.com/Reivaxu" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="tel:+5541995640649" target="_blank">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+      </div>
+      <footer>
+        <p>Feito por ReivaxU</p>
+      </footer>
+    </div>
+    <!--Caixa genérica sem estilos, id= pode ser visto como um RG, mas serve para identificcar uma tag-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+<!-- O recúo nas linhas chama-se identação, tendo o proposito de melhor visualização do código -->
