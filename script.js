@@ -14,7 +14,7 @@ function toggleButton() {
   // Substituir a imagem
   if (html.classList.contains("light")) {
     // Se tiver ligth mode, adicionar a imagem light
-    img.setAttribute("src", "./assets/avatar-day.png")
+    img.setAttribute("src", "./assets/avatar.png")
     img.setAttribute("alt", "avatar-day")
   } else {
     // Se não tiver ligth mode, manter a imagem normal
