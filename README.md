@@ -32,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O projeto tratase de um agregador de links para usar como cartão de visitas online.
+O projeto trata-se de um agregador de links para usar como cartão de visitas online.
 
 ## 🔖 Layout
 
@@ -44,4 +44,4 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Feito por Reivaxu 
+Feito por Reivaxu com a ajuda da RocketSeat
