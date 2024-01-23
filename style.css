@@ -36,7 +36,7 @@ body {
 
   /*É possível criar um SHORTHAND(atalho) para o fundo, background: color image repeat position/size nesta ordem*/
   background: var(--bg-url) no-repeat top center/cover;
-  height: 100%vh;
+  height: 100vh;
 }
 
 body * {
@@ -94,11 +94,16 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-60%);
+  animation: slide-back 1s;
 }
 
 .light #switch button {
-  left: initial;
-  right: 0;
+  animation: slide-in 1s forwards;
+  animation-iteration-count: 1;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--hover-color);
 }
 
 #switch span {
@@ -183,5 +188,24 @@ footer {
 
   .light {
     --bg-url: url(./assets/day-background.jpg)
+  }
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
