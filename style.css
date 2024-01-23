@@ -44,7 +44,8 @@ body * {
 } /* Apliquei a fonte e a cor para todo o body*/
 
 #container {
-  width: 588px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0px; /* Alinha a caixa ao meio automaticamente, só funciona com a largura, e funciona como SHORTHAND em sentido horario*/
   gap: 8px;
   padding: 0px 24px;
